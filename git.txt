@@ -2,6 +2,7 @@
 git config --global user.name/user.email 'xxx'
 #创建仓库
 git init
+
 #添加暂存
 git add xxx
 #提交暂存(描述)
@@ -9,7 +10,7 @@ git commit -m 'xxx'
 
 #查看状态
 git status
-#查看不同,工作区和暂存区(暂存区-仓库分支比较)(工作区和仓库分支)
+#查看不同,工作区和暂存区(暂存区-仓库分支比较)
 git diff xxx (--cached) (--staged)
 
 #查看日志(简述)
