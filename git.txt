@@ -76,12 +76,18 @@ git merge --no-ff -m 'xxx' dev
 git tag
 #创建一个新标签
 git tag v1.0
+#删除一个标签
+git tag -d v1.0
 #创建带描述的标签
 git tag -a {tag-name} -m {description} {commit-id}
 #给commit建标签
 git tag {tag-name} {commit-id}
 #查看标签详情
 git show {tag-name}
+#提交单个标签到远程
+git push origin {tagName}
+#提交所有标签到远程
+git push origin -tags
 
 
 '''储存区'''
