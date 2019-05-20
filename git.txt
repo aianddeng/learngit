@@ -3,8 +3,11 @@ git config --global user.name/user.email 'xxx'
 #创建仓库
 git init
 
+'''添加'''
 #添加暂存
 git add xxx
+#暂存区删除文件(工作区删除后操作,或执行add亦可)
+git rm xxx
 #提交暂存(描述)
 git commit -m 'xxx' 
 
@@ -15,6 +18,7 @@ git status
 git diff xxx (--cached) (--staged) (HEAD)
 
 
+'''撤销'''
 #撤销工作区修改,恢复暂存区或仓库分支
 git checkout -- xxx
 
@@ -25,3 +29,19 @@ git reset HEAD xxx
 git log/reflog (--pretty=oneline)
 #版本回退多个/指定
 git reset --hard HEAD^(~2)/xxx
+
+
+
+'''远程'''
+#添加远程仓库
+git remote add origin xxx
+#修改远程仓库
+git remote set-url origin xxx
+#删除远程仓库
+git remote rm origin
+
+#推送到仓库(-u关联远程仓库,第一次需要加)
+git push -u origin master
+
+
+
