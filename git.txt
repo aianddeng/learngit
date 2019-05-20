@@ -6,15 +6,17 @@ git init
 #添加暂存
 git add xxx
 #提交暂存(描述)
-git commit -m 'xxx'
+git commit -m 'xxx' 
 
 #查看状态
 git status
-#查看不同,工作区和[|上次]暂存区(暂存区-仓库分支比较)
-git diff xxx (--cached) (--staged)
+#查看不同,工作区和暂存区(暂存区-仓库分支比较)(工作区-仓库分支)
+#!我理解的暂存区不会清空,故就算提交暂存区文件到分支,再进行git diff,依旧显示不同,直到更新暂存区
+git diff xxx (--cached) (--staged) (HEAD)
 
 #查看日志(简述)
 git log/reflog (--pretty=oneline)
 #版本回退多个/指定
 git reset --hard HEAD^(~2)/xxx
 
+stupid boss
