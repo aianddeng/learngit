@@ -55,7 +55,7 @@ git clone xxx
 
 
 '''分支'''
-#创建并切换分支(链接到远程分支)
+#创建并切换分支(基于远程创建分支)
 git checkout -b dev (origin/dev)
 #创建分支(-d删除分支)(-D强制删除)
 git branch dev
