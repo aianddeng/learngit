@@ -43,5 +43,24 @@ git remote rm origin
 #推送到仓库(-u关联远程仓库,第一次需要加)
 git push -u origin master
 
+#下载到本地
+git clone xxx
+
+
+
+'''分支'''
+#创建并切换分支
+git checkout -b dev
+#等同于
+#创建分支(-d删除分支)
+git branch dev
+#切换分支
+git checkout dev
+
+#查看当前分支
+git branch
+
+#合并分支
+git merge dev
 
 
