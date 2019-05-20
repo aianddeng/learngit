@@ -10,7 +10,7 @@ git commit -m 'xxx'
 
 #查看状态
 git status
-#查看不同,工作区和暂存区(暂存区-仓库分支比较)
+#查看不同,工作区和[|上次]暂存区(暂存区-仓库分支比较)
 git diff xxx (--cached) (--staged)
 
 #查看日志(简述)
