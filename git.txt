@@ -25,8 +25,8 @@ git checkout -- xxx
 #撤销add操作(可与上一步结合
 git reset HEAD xxx
 
-#查看日志(简述)
-git log/reflog (--pretty=oneline)
+#查看日志(简述) (分支合并图)
+git log/reflog (--pretty=oneline) (--graph)
 #版本回退多个/指定
 git reset --hard HEAD^(~2)/xxx
 
@@ -60,9 +60,10 @@ git checkout dev
 #查看当前分支
 git branch
 
-#合并分支
+#合并分支(HEAD 指向创建的分支
 git merge dev
+#不舍弃master,commit分支的内容
+git merge --no-ff -m 'xxx' dev
 
-#git
 
-add more
+hihihi
