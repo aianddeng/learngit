@@ -41,7 +41,7 @@ git remote set-url origin xxx
 git remote rm origin
 
 #推送到仓库(-u关联远程仓库,第一次需要加)
-git push -u origin master
+git push (-u origin master)
 
 #下载到本地
 git clone xxx
@@ -66,4 +66,13 @@ git merge dev
 git merge --no-ff -m 'xxx' dev
 
 
-hihihi
+#储存工作区(修复主分支bug后继续当前分支开发)
+git stash
+#查看储存区
+git stash list
+#恢复工作区并删除储存
+git stash pop
+#恢复工作区不删除储存
+git stash apply
+#删除储存
+git stash drop
