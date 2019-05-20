@@ -70,7 +70,7 @@ git merge --no-ff -m 'xxx' dev
 git stash
 #查看储存区
 git stash list
-#恢复工作区并删除储存
+#恢复工作区并删除储存(推荐
 git stash pop
 #恢复工作区不删除储存
 git stash apply
