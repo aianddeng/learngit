@@ -14,9 +14,14 @@ git status
 #!我理解的暂存区不会清空,故就算提交暂存区文件到分支,再进行git diff,依旧显示不同,直到更新暂存区
 git diff xxx (--cached) (--staged) (HEAD)
 
+
+#撤销工作区修改,恢复暂存区或仓库分支
+git checkout -- xxx
+
+#撤销add操作(可与上一步结合
+git reset HEAD xxx
+
 #查看日志(简述)
 git log/reflog (--pretty=oneline)
 #版本回退多个/指定
 git reset --hard HEAD^(~2)/xxx
-
-stupid boss
