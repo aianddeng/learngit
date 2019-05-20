@@ -52,7 +52,7 @@ git clone xxx
 #创建并切换分支
 git checkout -b dev
 #等同于
-#创建分支(-d删除分支)
+#创建分支(-d删除分支)(-D强制删除)
 git branch dev
 #切换分支
 git checkout dev
@@ -76,5 +76,5 @@ git stash pop
 git stash apply
 #删除储存
 git stash drop
-add news
-add news two
+
+
