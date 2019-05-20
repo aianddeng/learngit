@@ -47,7 +47,7 @@ git push (-u origin master)
 #合并到本地(多人协作,存在修改)
 git pull
 #分支创建链接关系
-git branch --set-upstream-to dev origin/dev
+git branch --set-upstream-to=origin/dev dev
 
 #下载到本地
 git clone xxx
@@ -71,6 +71,19 @@ git merge dev
 git merge --no-ff -m 'xxx' dev
 
 
+'''标签'''
+#查看所有标签
+git tag
+#创建一个新标签
+git tag v1.0
+#创建带描述的标签
+git tag -a {tag-name} -m {description} {commit-id}
+#给commit建标签
+git tag {tag-name} {commit-id}
+#查看标签详情
+git show {tag-name}
+
+
 '''储存区'''
 #储存工作区(修复主分支bug后继续当前分支开发)
 git stash
@@ -83,4 +96,8 @@ git stash apply
 #删除储存
 git stash drop
 
+
+'''变基'''
+#类似merge合并,但是以打补丁的方法,log为直线
+git rebase
 
