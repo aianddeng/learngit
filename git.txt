@@ -6,7 +6,14 @@ git init
 git add xxx
 #提交暂存(描述)
 git commit -m 'xxx'
+
 #查看状态
 git status
-#查看不同
-git diff xxx
+#查看不同,工作区和暂存区(暂存区-仓库分支比较)(工作区和仓库分支)
+git diff xxx (--cached) (--staged)
+
+#查看日志(简述)
+git log/reflog (--pretty=oneline)
+#版本回退多个/指定
+git reset --hard HEAD^(~2)/xxx
+
