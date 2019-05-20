@@ -76,3 +76,5 @@ git stash pop
 git stash apply
 #删除储存
 git stash drop
+add news
+add news two
