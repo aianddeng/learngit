@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #初始化
 git config --global user.name/user.email 'xxx'
 #创建仓库
@@ -106,4 +107,3 @@ git stash drop
 '''变基'''
 #类似merge合并,但是以打补丁的方法,log为直线
 git rebase
-
