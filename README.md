@@ -2,7 +2,7 @@
 
 ***
 
-##git 配置
+## git 配置 ##
 
 ###初始化
 >git config --global user.name/user.email 'xxx'
