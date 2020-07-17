@@ -6,13 +6,14 @@
 
 ### 初始化 ###
 > $ git config --global user.name/user.email 'xxx'
+> $ git config --list/-l
 
 ### 创建仓库 ###
 > $ git init
 
 ***
 
-## 添加 ##
+## 暂存区 ##
 
 ### 添加暂存 ###
 > $ git add xxx
@@ -28,11 +29,16 @@
 ## 查看状态 ##
 > $ git status
 
-### 查看不同,工作区和暂存区(暂存区-仓库分支比较)(工作区-仓库 ###分支)
+### 查看不同,
 ```
-!我理解的暂存区不会清空,故就算提交暂存区文件到分支,再进行> $ git diff,依旧显示不同,直到更新暂存区
+1.工作区和暂存区 (2.暂存区-仓库) (3.工作区-仓库)  {后面跟文件名查看具体不同}
 ```
-> $ git diff xxx (--cached) (--staged) (HEAD)
+> $ git diff (--cached == --staged) (HEAD => HEAD^) xxx.file
+```
+4.查看分支不同，--stat只提供文件名。5.^表示查看b1有而b2没有的提交
+```
+> $ git diff branch branch2 (--stat) xxx.file
+> $ git log branch ^branch2 (..)
 
 ***
 
@@ -40,15 +46,17 @@
 
 ### 撤销工作区修改,恢复暂存区或仓库分支 ###
 > $ git checkout -- xxx
+> $ git restore xxx.file/.
 
 ### 撤销add操作(可与上一步结合 ###
 > $ git reset HEAD xxx
-
-### 查看日志(简述) (分支合并图) ###
-> $ git log/reflog (--pretty=oneline) (--graph)
+> $ git restore --staged xxx.file/.
 
 ### 版本回退多个/指定 ###
 > $ git reset --hard HEAD^(~2)/xxx
+
+### 查看日志/命令历史(简述) (分支合并图) ###
+> $ git log/reflog (--pretty=oneline) (--graph)
 
 ***
 
@@ -84,17 +92,19 @@
 
 ### 创建并切换分支(基于远程创建分支) ###
 > $ git checkout -b dev (origin/dev)
+> $ git switch -c dev (origin/dev)
 
 ### 创建分支(-d删除分支)(-D强制删除) ###
 > $ git branch dev
 
 ### 切换分支 ###
-> $ git checkout de
+> $ git checkout dev
+> $ git switch dev 
 
-### 查看当前分支 ###
-> $ git branch
+### 查看当前分支(所有分支/远程分支/分支详情/本地分支与远程分支关系) ###
+> $ git branch -a/-r/-v/-vv
 
-### 合并分支(HEAD 指向创建的分支 ###
+### 合并分支(HEAD 指向创建的分支) ###
 > $ git merge dev
 
 ### 不舍弃master,commit分支的内容 ###
