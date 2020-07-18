@@ -54,6 +54,7 @@
 
 ### 版本回退多个/指定 ###
 > $ git reset --hard HEAD^(~2)/xxx
+> $ git revert HEAD^(~2)
 
 ### 查看日志/命令历史(简述) (分支合并图) ###
 > $ git log/reflog (--pretty=oneline) (--graph)
@@ -104,8 +105,9 @@
 ### 查看当前分支(所有分支/远程分支/分支详情/本地分支与远程分支关系) ###
 > $ git branch -a/-r/-v/-vv
 
-### 合并分支(HEAD 指向创建的分支) ###
+### 合并分支(HEAD 指向创建的分支)(将提交重复一遍，用于修bug) ###
 > $ git merge dev
+> $ git cherry-pick <commit-id>
 
 ### 不舍弃master,commit分支的内容 ###
 > $ git merge --no-ff -m 'xxx' dev
